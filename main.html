@@ -41,29 +41,29 @@
 				bottom: 0;
 				width: 100%;
 				height: auto;
-				background-color: #f8c784;
+				background-color: #f8c884e6;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				padding: 20px 0;
+				padding: 10px 0;
 			}
 
 			.footer-content {
 				display: flex;
 				align-items: center;
-				/* justify-content: space-between; */
 				width: 80%;
-			}
-
-			.footer-content > div:first-child img {
-				width: 170px;
-				height: 170px;
+				justify-content: space-between;
 			}
 
 			.footer-content > div:last-child img {
+				width: 40%;
+				height: auto;
+			}
+
+			/* .footer-content > div:last-child img {
 				width: 200px;
 				height: 150px;
-			}
+			} */
 
 			.footer-text {
 				text-align: center;
@@ -74,6 +74,30 @@
 
 			.words {
 				margin-left: 10px;
+			}
+
+			@media (max-width: 768px) {
+				.footer-content {
+					flex-direction: row; /* Stack content vertically */
+					justify-content: space-between;
+					display: flex;
+				}
+				.footer-content .words h1 {
+					font-size: 16px; /* Smaller font size for small screens */
+				}
+
+				.footer-content .words p {
+					font-size: 12px; /* Smaller font size for small screens */
+				}
+
+				.footer-content img {
+					width: 100%; /* Make image fill the div width */
+					height: auto; /* Maintain aspect ratio */
+				}
+
+				.footer-content .words {
+					margin-bottom: 10px; /* Add space between text and image */
+				}
 			}
 		</style>
 	</head>
@@ -91,17 +115,14 @@
 		</div>
 		<footer>
 			<div class="footer-content">
-				<div>
-					<img src="qr.png" alt="QR Code" />
-				</div>
 				<div class="words">
 					<div>
 						<h1 class="display-8 fw-bold mb-2">品质生活，任您挑选</h1>
 						<p class="lead">微信扫码进入星球探房</p>
 					</div>
 				</div>
-				<div>
-					<!-- <img src="pic.png" alt="Footer Image" /> -->
+				<div style="display: flex; justify-content: flex-end">
+					<img src="qr.png" alt="QR Code" />
 				</div>
 			</div>
 		</footer>
