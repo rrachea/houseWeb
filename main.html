@@ -68,20 +68,21 @@
 				height: auto;
 			}
 
-			/* .footer-content > div:last-child img {
-				width: 200px;
-				height: 200px;
-			} */
-
-			.footer-text {
-				text-align: center;
-				font-size: 18px;
-				font-weight: bold;
-				margin: 0 20px;
+			/* .footer-header {
+				font-size: 20px;
 			}
 
+			.footer-text {
+				font-size: 20px; */
+			/* } */
 			.words {
-				margin-left: 10px;
+				margin-left: -100px;
+			}
+
+			@media (max-width: 2000px) {
+				.words {
+					margin-left: 5px;
+				}
 			}
 
 			@media (max-width: 768px) {
@@ -90,22 +91,31 @@
 					justify-content: space-between;
 					display: flex;
 				}
-				.footer-content .words h1 {
-					font-size: 16px; /* Smaller font size for small screens */
-				}
-
-				.footer-content .words p {
+				.footer-content .words h2 {
 					font-size: 12px; /* Smaller font size for small screens */
 				}
 
+				.footer-content .words p {
+					font-size: 7px; /* Smaller font size for small screens */
+				}
+
 				.footer-content img {
-					width: 100%; /* Make image fill the div width */
+					width: 20%; /* Make image fill the div width */
 					height: auto; /* Maintain aspect ratio */
+					max-width: 100px;
 				}
 
 				.footer-content .words {
-					margin-bottom: 10px; /* Add space between text and image */
+					margin-bottom: 5px; /* Add space between text and image */
 				}
+
+				footer {
+					padding: 10px 0;
+					margin-top: 10px;
+				}
+				/* .words {
+					margin-left: -10px;
+				} */
 			}
 		</style>
 	</head>
@@ -124,9 +134,9 @@
 		<footer>
 			<div class="footer-content">
 				<div class="words">
-					<div>
-						<h1 class="display-8 fw-bold mb-2">品质生活，任您挑选</h1>
-						<p class="lead">微信扫码进入星球探房</p>
+					<div style="white-space: nowrap">
+						<h2 class="fw-bold mb-2 footer-header">品质生活，任您挑选</h2>
+						<p class="lead footer-text">微信扫码进入星球探房</p>
 					</div>
 				</div>
 				<div style="display: flex; justify-content: flex-end">
